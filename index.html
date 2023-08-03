@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Age calculator app</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <!-- <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style> -->
+  </head>
+  <body>
+    <div class="ageCalculatorApp">
+      <div class="input">
+        <div id="day">
+          <p class="gf title">day</p>
+          <input type="text" name="" id="day_input" class="inputs gray" focus />
+          <p class="hidden"></p>
+        </div>
+        <div id="month">
+          <p class="gf title">month</p>
+          <input type="text" name="" id="month_input" class="inputs gray" />
+          <p class="hidden"></p>
+        </div>
+        <div id="year">
+          <p class="gf title">year</p>
+          <input type="text" name="" id="year_input" class="inputs gray" />
+          <p class="hidden"></p>
+        </div>
+        <button id="btn">
+          <img src="assets/images/icon-arrow.svg" alt="" />
+        </button>
+      </div>
+      <div class="output">
+        <p><span id="years_span">0</span>years</p>
+        <p><span id="months_span">0</span>months</p>
+        <p><span id="days_span">0</span>days</p>
+      </div>
+    </div>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by
+      <a href="https://github.com/DivChico" target="_blank">DivChico</a>.
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,200 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+:root {
+  --clr_primary: #151515;
+  --clr_secondary: #864cff;
+  --clr_font: #7a7a7a;
+  --clr_lr: hsl(0, 100%, 67%);
+  --yearContent: "";
+  --monthContent: "";
+  --dayContent: "";
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 10px;
+  background-color: aliceblue;
+}
+.attribution {
+  margin: 0px auto;
+  text-align: center;
+}
+.ageCalculatorApp {
+  width: 600px;
+  border-top-left-radius: 5%;
+
+  border-top-right-radius: 5%;
+  border-bottom-left-radius: 5%;
+
+  border-bottom-right-radius: 30%;
+  margin: 100px auto 0px;
+  background-color: white;
+  padding-bottom: 5px;
+}
+.input {
+  display: flex;
+  width: 100%;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #7a7a7a63;
+  position: relative;
+  padding-left: 50px;
+}
+
+#day,
+#month,
+#year {
+  width: 25%;
+  margin-top: 20px;
+  position: relative;
+}
+#day::after {
+  position: absolute;
+  content: var(--dayContent);
+  color: var(--clr_lr);
+  width: 100%;
+  bottom: -20px;
+  left: 0px;
+}
+#month::after {
+  position: absolute;
+  content: var(--monthContent);
+  color: var(--clr_lr);
+  width: 100%;
+  bottom: -20px;
+  left: 0px;
+}
+#year::after {
+  position: absolute;
+  content: var(--yearContent);
+  color: var(--clr_lr);
+  width: 100%;
+  bottom: -20px;
+  left: 0px;
+}
+.title {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 1rem;
+  margin: 0;
+}
+.input .inputs {
+  margin: 0;
+  width: 80%;
+  padding: 10px;
+  border-radius: 5px;
+  border-width: 1px;
+  border-style: solid;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  font-weight: 700;
+  font-size: 32px;
+}
+.input input:focus {
+  outline: none;
+  border: gray 1px solid;
+}
+.input .hidden {
+  position: absolute;
+  bottom: -30px;
+  left: 0;
+  color: var(--clr_lr);
+  font-weight: 400i;
+  width: 100%;
+  font-size: 0.6rem;
+  letter-spacing: inherit;
+}
+#btn {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  position: absolute;
+  bottom: 0px;
+  right: 5%;
+  background-color: var(--clr_secondary);
+  transform: translateY(50%);
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+#btn:hover {
+  background-color: rgba(0, 0, 0, 0.918);
+}
+#btn img {
+  width: 100%;
+}
+.output {
+  padding-left: 50px;
+}
+
+.output p {
+  margin-bottom: 1px;
+  margin-top: 1px;
+  font-size: 4rem;
+  font-weight: 800;
+  font-style: italic;
+}
+.output span {
+  color: var(--clr_secondary);
+}
+.gb {
+  border-color: rgba(128, 128, 128, 0.308);
+}
+.rb {
+  border-color: red;
+}
+.gf {
+  color: var(--clr_font);
+}
+.rf {
+  color: var(--clr_lr);
+}
+@media only screen and (max-width: 768px) {
+  .ageCalculatorApp {
+    width: 80%;
+  }
+  .input {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 50px;
+
+    justify-content: space-between;
+    margin: 0px auto;
+  }
+  #day,
+  #month,
+  #year {
+    width: calc(90% / 3);
+    margin-top: 20px;
+    position: relative;
+  }
+  .input .inputs {
+    width: 100%;
+    font-size: 1.4rem;
+  }
+  #btn {
+    left: 50%;
+    transform: translate(-50%, 50%);
+    -webkit-transform: translate(-50%, 50%);
+    -moz-transform: translate(-50%, 50%);
+    -ms-transform: translate(-50%, 50%);
+    -o-transform: translate(-50%, 50%);
+  }
+  .output {
+    padding-top: 20px;
+    padding-left: 10px;
+  }
+  .output p {
+    font-size: 3.5rem;
+  }
+  .output p:not(:nth-child(1)) {
+    margin-top: -30px;
+  }
+}
